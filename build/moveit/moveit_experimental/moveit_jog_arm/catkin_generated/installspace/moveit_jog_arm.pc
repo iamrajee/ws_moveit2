@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/install
+
+Name: moveit_jog_arm
+Description: Description of moveit_jog_arm
+Version: 0.0.3
+Cflags: -I/home/rajendra/ws_moveit/install/include -I/usr/include/eigen3
+Libs: -L/home/rajendra/ws_moveit/install/lib -ljog_arm_cpp_api
+Requires: control_msgs geometry_msgs moveit_ros_planning_interface rosparam_shortcuts

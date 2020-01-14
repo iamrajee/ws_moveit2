@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/install
+
+Name: moveit_planners_chomp
+Description: Description of moveit_planners_chomp
+Version: 1.0.1
+Cflags: -I/home/rajendra/ws_moveit/install/include
+Libs: -L/home/rajendra/ws_moveit/install/lib -lmoveit_planners_chomp
+Requires: roscpp moveit_core pluginlib

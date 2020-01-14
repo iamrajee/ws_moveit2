@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/install
+
+Name: moveit_ros_manipulation
+Description: Description of moveit_ros_manipulation
+Version: 1.0.1
+Cflags: -I/home/rajendra/ws_moveit/install/include -I/usr/include/eigen3
+Libs: -L/home/rajendra/ws_moveit/install/lib -lmoveit_pick_place_planner
+Requires: moveit_core moveit_msgs moveit_ros_planning

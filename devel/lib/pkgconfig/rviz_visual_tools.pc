@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/devel
+
+Name: rviz_visual_tools
+Description: Description of rviz_visual_tools
+Version: 3.7.0
+Cflags: -I/home/rajendra/ws_moveit/src/rviz_visual_tools/include -I/usr/include/OGRE
+Libs: -L/home/rajendra/ws_moveit/devel/lib -lrviz_visual_tools -lrviz_visual_tools_gui -lrviz_visual_tools_remote_control -lrviz_visual_tools_imarker_simple
+Requires: eigen_conversions geometry_msgs graph_msgs shape_msgs roscpp sensor_msgs std_msgs tf_conversions trajectory_msgs visualization_msgs

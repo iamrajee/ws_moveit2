@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/install
+
+Name: geometric_shapes
+Description: Description of geometric_shapes
+Version: 0.6.1
+Cflags: -I/home/rajendra/ws_moveit/install/include -I/usr/include/eigen3 -I/opt/ros/melodic/include -I/usr/include
+Libs: -L/home/rajendra/ws_moveit/install/lib -lgeometric_shapes /opt/ros/melodic/lib/liboctomap.so /opt/ros/melodic/lib/liboctomath.so /usr/lib/x86_64-linux-gnu/libconsole_bridge.so.0.4
+Requires: eigen_stl_containers random_numbers shape_msgs visualization_msgs

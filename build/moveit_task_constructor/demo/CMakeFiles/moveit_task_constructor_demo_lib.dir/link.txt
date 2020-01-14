@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libmoveit_task_constructor_demo_pick_place.so -o /home/rajendra/ws_moveit/devel/lib/libmoveit_task_constructor_demo_pick_place.so CMakeFiles/moveit_task_constructor_demo_lib.dir/src/pick_place_task.cpp.o 

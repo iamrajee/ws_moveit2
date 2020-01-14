@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/install
+
+Name: moveit_task_constructor_visualization
+Description: Description of moveit_task_constructor_visualization
+Version: 0.0.0
+Cflags: -I/home/rajendra/ws_moveit/install/include
+Libs: -L/home/rajendra/ws_moveit/install/lib -lmoveit_task_visualization_tools -lmotion_planning_tasks_utils
+Requires: moveit_core moveit_task_constructor_msgs roscpp rviz

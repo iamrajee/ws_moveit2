@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/devel
+
+Name: moveit_kinematics
+Description: Description of moveit_kinematics
+Version: 1.0.1
+Cflags: -I/home/rajendra/ws_moveit/src/moveit/moveit_kinematics/kdl_kinematics_plugin/include -I/home/rajendra/ws_moveit/src/moveit/moveit_kinematics/lma_kinematics_plugin/include -I/home/rajendra/ws_moveit/src/moveit/moveit_kinematics/srv_kinematics_plugin/include -I/home/rajendra/ws_moveit/src/moveit/moveit_kinematics/cached_ik_kinematics_plugin/include -I/usr/include/eigen3
+Libs: -L/home/rajendra/ws_moveit/devel/lib 
+Requires: pluginlib moveit_core

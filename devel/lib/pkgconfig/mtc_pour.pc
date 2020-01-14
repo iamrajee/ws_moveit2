@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/devel
+
+Name: mtc_pour
+Description: Description of mtc_pour
+Version: 0.0.0
+Cflags: -I/home/rajendra/ws_moveit/src/mtc_pour/include
+Libs: -L/home/rajendra/ws_moveit/devel/lib -lmtc_pour_into
+Requires: 
