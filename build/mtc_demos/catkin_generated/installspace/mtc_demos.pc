@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/install
-
-Name: mtc_demos
-Description: Description of mtc_demos
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/rajendra/ws_moveit/install/lib 
-Requires: 

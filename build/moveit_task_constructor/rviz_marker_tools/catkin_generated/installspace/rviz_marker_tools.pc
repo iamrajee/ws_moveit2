@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/install
-
-Name: rviz_marker_tools
-Description: Description of rviz_marker_tools
-Version: 0.0.0
-Cflags: -I/home/rajendra/ws_moveit/install/include
-Libs: -L/home/rajendra/ws_moveit/install/lib -lrviz_marker_tools
-Requires: geometry_msgs visualization_msgs roscpp rviz

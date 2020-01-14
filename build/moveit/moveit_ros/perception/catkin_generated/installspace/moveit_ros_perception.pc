@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/install
-
-Name: moveit_ros_perception
-Description: Description of moveit_ros_perception
-Version: 1.0.1
-Cflags: -I/home/rajendra/ws_moveit/install/include -I/usr/include/eigen3
-Libs: -L/home/rajendra/ws_moveit/install/lib -lmoveit_lazy_free_space_updater -lmoveit_point_containment_filter -lmoveit_pointcloud_octomap_updater_core -lmoveit_semantic_world
-Requires: image_transport moveit_core moveit_msgs moveit_ros_occupancy_map_monitor object_recognition_msgs sensor_msgs tf2_geometry_msgs

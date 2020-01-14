@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/devel
-
-Name: moveit_simple_controller_manager
-Description: Description of moveit_simple_controller_manager
-Version: 1.0.1
-Cflags: -I/home/rajendra/ws_moveit/src/moveit/moveit_plugins/moveit_simple_controller_manager/include
-Libs: -L/home/rajendra/ws_moveit/devel/lib -lmoveit_simple_controller_manager
-Requires: moveit_core actionlib control_msgs

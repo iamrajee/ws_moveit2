@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/install
-
-Name: moveit_ros_planning_interface
-Description: Description of moveit_ros_planning_interface
-Version: 1.0.1
-Cflags: -I/home/rajendra/ws_moveit/install/include -I/usr/include/eigen3
-Libs: -L/home/rajendra/ws_moveit/install/lib -lmoveit_common_planning_interface_objects -lmoveit_planning_scene_interface -lmoveit_move_group_interface -lmoveit_cpp
-Requires: actionlib moveit_ros_planning moveit_ros_warehouse moveit_ros_manipulation moveit_ros_move_group geometry_msgs moveit_msgs tf2_geometry_msgs

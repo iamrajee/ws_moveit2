@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/devel
-
-Name: moveit_ros_planning_interface
-Description: Description of moveit_ros_planning_interface
-Version: 1.0.1
-Cflags: -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/planning_interface/py_bindings_tools/include -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/planning_interface/common_planning_interface_objects/include -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/planning_interface/planning_scene_interface/include -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/planning_interface/move_group_interface/include -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/planning_interface/moveit_cpp/include -I/usr/include/eigen3
-Libs: -L/home/rajendra/ws_moveit/devel/lib -lmoveit_common_planning_interface_objects -lmoveit_planning_scene_interface -lmoveit_move_group_interface -lmoveit_cpp
-Requires: actionlib moveit_ros_planning moveit_ros_warehouse moveit_ros_manipulation moveit_ros_move_group geometry_msgs moveit_msgs tf2_geometry_msgs

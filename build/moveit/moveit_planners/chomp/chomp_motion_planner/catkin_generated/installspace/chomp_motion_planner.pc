@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/install
-
-Name: chomp_motion_planner
-Description: Description of chomp_motion_planner
-Version: 1.0.1
-Cflags: -I/home/rajendra/ws_moveit/install/include
-Libs: -L/home/rajendra/ws_moveit/install/lib -lchomp_motion_planner
-Requires: 

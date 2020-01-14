@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/install
-
-Name: moveit_task_constructor_msgs
-Description: Description of moveit_task_constructor_msgs
-Version: 0.0.0
-Cflags: -I/home/rajendra/ws_moveit/install/include
-Libs: -L/home/rajendra/ws_moveit/install/lib 
-Requires: message_runtime moveit_msgs visualization_msgs

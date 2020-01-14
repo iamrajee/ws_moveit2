@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/devel
-
-Name: moveit_task_constructor_core
-Description: Description of moveit_task_constructor_core
-Version: 0.0.0
-Cflags: -I/home/rajendra/ws_moveit/src/moveit_task_constructor/core/include
-Libs: -L/home/rajendra/ws_moveit/devel/lib -lmoveit_task_constructor_core -lmoveit_task_constructor_core_stages
-Requires: geometry_msgs moveit_core moveit_task_constructor_msgs visualization_msgs

@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/install
-
-Name: moveit_task_constructor_demo
-Description: Description of moveit_task_constructor_demo
-Version: 0.0.1
-Cflags: 
-Libs: -L/home/rajendra/ws_moveit/install/lib 
-Requires: 

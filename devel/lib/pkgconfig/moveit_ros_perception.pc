@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/devel
-
-Name: moveit_ros_perception
-Description: Description of moveit_ros_perception
-Version: 1.0.1
-Cflags: -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/perception/lazy_free_space_updater/include -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/perception/point_containment_filter/include -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/perception/pointcloud_octomap_updater/include -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/perception/semantic_world/include -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/perception/mesh_filter/include -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/perception/depth_image_octomap_updater/include -I/usr/include/eigen3
-Libs: -L/home/rajendra/ws_moveit/devel/lib -lmoveit_lazy_free_space_updater -lmoveit_point_containment_filter -lmoveit_pointcloud_octomap_updater_core -lmoveit_semantic_world
-Requires: image_transport moveit_core moveit_msgs moveit_ros_occupancy_map_monitor object_recognition_msgs sensor_msgs tf2_geometry_msgs
