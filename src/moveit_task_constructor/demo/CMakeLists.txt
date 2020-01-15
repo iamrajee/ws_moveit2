@@ -34,6 +34,7 @@ target_link_libraries(${PROJECT_NAME}_demo
   ${PROJECT_NAME}_lib
   ${catkin_LIBRARIES}
 )
+
 set_target_properties(${PROJECT_NAME}_demo PROPERTIES OUTPUT_NAME moveit_task_constructor_demo)
 add_dependencies(${PROJECT_NAME}_demo ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
