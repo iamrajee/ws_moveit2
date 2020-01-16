@@ -84,7 +84,8 @@ void PickPlaceTask::loadParameters() {
 
 void PickPlaceTask::init() {
 	ROS_INFO_NAMED(LOGNAME, "Initializing task pipeline");
-	const std::string object = "object";
+	// const std::string object = "object";                           //!!! <=====error
+	const std::string object = object_name_;
 
 	// Reset ROS introspection before constructing the new object
 	// TODO(henningkayser): verify this is a bug, fix if possible
@@ -121,7 +122,7 @@ void PickPlaceTask::init() {
 	{
 		auto _current_state = std::make_unique<stages::CurrentState>("current state");
 
-		// Verify that object is not attachd
+		// Verify that object is not attachd												// !!! mistake attached <====
 		auto applicability_filter =
 		    std::make_unique<stages::PredicateFilter>("applicability test", std::move(_current_state));
 		applicability_filter->setPredicate([object](const SolutionBase& s, std::string& comment) {

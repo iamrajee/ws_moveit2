@@ -19,6 +19,8 @@ include_directories(
   ${catkin_INCLUDE_DIRS}
 )
 
+
+
 add_executable(cartesian src/cartesian.cpp)
 target_link_libraries(cartesian ${catkin_LIBRARIES})
 
@@ -29,14 +31,18 @@ add_library(${PROJECT_NAME}_lib src/pick_place_task.cpp)
 set_target_properties(${PROJECT_NAME}_lib PROPERTIES OUTPUT_NAME moveit_task_constructor_demo_pick_place)
 add_dependencies(${PROJECT_NAME}_lib ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
-add_executable(${PROJECT_NAME}_demo src/moveit_task_constructor_demo.cpp)
-target_link_libraries(${PROJECT_NAME}_demo
-  ${PROJECT_NAME}_lib
-  ${catkin_LIBRARIES}
-)
 
+
+
+add_executable(${PROJECT_NAME}_demo src/moveit_task_constructor_demo.cpp)
+target_link_libraries(${PROJECT_NAME}_demo ${PROJECT_NAME}_lib ${catkin_LIBRARIES})
 set_target_properties(${PROJECT_NAME}_demo PROPERTIES OUTPUT_NAME moveit_task_constructor_demo)
 add_dependencies(${PROJECT_NAME}_demo ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
+add_executable(${PROJECT_NAME}_demo2 src/moveit_task_constructor_demo2.cpp)
+target_link_libraries(${PROJECT_NAME}_demo2 ${PROJECT_NAME}_lib ${catkin_LIBRARIES})
+set_target_properties(${PROJECT_NAME}_demo2 PROPERTIES OUTPUT_NAME moveit_task_constructor_demo2)
+add_dependencies(${PROJECT_NAME}_demo2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 install(TARGETS ${PROJECT_NAME}_lib ${PROJECT_NAME}_demo
   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
