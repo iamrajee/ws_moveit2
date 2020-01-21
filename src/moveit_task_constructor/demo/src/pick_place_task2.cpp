@@ -1,4 +1,4 @@
-#include <moveit_task_constructor_demo/pick_place_task.h>
+#include <moveit_task_constructor_demo/pick_place_task2.h>
 #include <rosparam_shortcuts/rosparam_shortcuts.h>
 
 //---------------------------------------------------------------------------------------------------------------------------------------------//
@@ -265,7 +265,7 @@ void PickPlaceTask::init() {
 			geometry_msgs::PoseStamped p;
 			p.header.frame_id = object_reference_frame_;
 			p.pose = place_pose_;
-			p.pose.position.z += 0.5 * object_dimensions_[0] + place_surface_offset_;
+			p.pose.position.z += 0.5 * object_dimensions_[0] + place_surface_offset_; //placing com at half height of same object so that bottom surface touch ground
 			stage->setPose(p);
 			stage->setMonitoredStage(attach_object_stage);  // Hook into attach_object_stage
 			// Compute IK
@@ -334,13 +334,13 @@ void PickPlaceTask::init() {
 bool PickPlaceTask::plan() {
 	ROS_INFO_NAMED(LOGNAME, "Start searching for task solutions");
 	ros::NodeHandle pnh("~");
-	int planning_attempts = pnh.param<int>("planning_attempts", 10);
+	int planning_attempts = pnh.param<int>("planning_attempts", 10); // !! here 10 is only default value
 
 	try {
 		task_->plan(planning_attempts);
 	} catch (InitStageException& e) {
 		ROS_ERROR_STREAM_NAMED(LOGNAME, "Initialization failed: " << e);
-		return false;
+		return false; 
 	}
 	if (task_->numSolutions() == 0) {
 		ROS_ERROR_NAMED(LOGNAME, "Planning failed");
