@@ -5,6 +5,9 @@
 #include <moveit/planning_scene_interface/planning_scene_interface.h>
 #include <moveit_task_constructor_demo/pick_place_task3.h> // MTC pick/place demo implementation
 
+#include <iostream>
+#include<string>
+
 constexpr char LOGNAME[] = "moveit_task_constructor_demo";
 
 // ======================== spawnObject ====================
@@ -14,16 +17,31 @@ void spawnObject(moveit::planning_interface::PlanningSceneInterface& psi, const 
 }
 
 // ======================== createTable ====================
-moveit_msgs::CollisionObject createTable() {
+moveit_msgs::CollisionObject createTable(int i=0) {
 	ros::NodeHandle pnh("~");
 	std::string table_name, table_reference_frame;
 	std::vector<double> table_dimensions;
 	geometry_msgs::Pose pose;
+
+	std::string table_name_t, table_reference_frame_t, table_dimensions_t, table_pose_t;
+	if(!i){
+		table_name_t = "table_name";
+		table_reference_frame_t = "table_reference_frame";
+		table_dimensions_t = "table_dimensions";
+		table_pose_t = "table_pose";
+	}else{
+		table_name_t = "table"+std::to_string(i)+"_name";
+		table_reference_frame_t = "table"+std::to_string(i)+"_reference_frame";
+		table_dimensions_t = "table"+std::to_string(i)+"_dimensions";
+		table_pose_t = "table"+std::to_string(i)+"_pose";
+	}
+
+
 	std::size_t errors = 0;
-	errors += !rosparam_shortcuts::get(LOGNAME, pnh, "table_name", table_name);
-	errors += !rosparam_shortcuts::get(LOGNAME, pnh, "table_reference_frame", table_reference_frame);
-	errors += !rosparam_shortcuts::get(LOGNAME, pnh, "table_dimensions", table_dimensions);
-	errors += !rosparam_shortcuts::get(LOGNAME, pnh, "table_pose", pose);
+	errors += !rosparam_shortcuts::get(LOGNAME, pnh, table_name_t, table_name);
+	errors += !rosparam_shortcuts::get(LOGNAME, pnh, table_reference_frame_t, table_reference_frame);
+	errors += !rosparam_shortcuts::get(LOGNAME, pnh, table_dimensions_t, table_dimensions);
+	errors += !rosparam_shortcuts::get(LOGNAME, pnh, table_pose_t, pose);
 	rosparam_shortcuts::shutdownIfError(LOGNAME, errors); //exit if no. error > 0
 
 	moveit_msgs::CollisionObject object;
@@ -38,16 +56,31 @@ moveit_msgs::CollisionObject createTable() {
 }
 
 // ======================== createObject ====================
-moveit_msgs::CollisionObject createObject() {
+moveit_msgs::CollisionObject createObject(int i=0) {
 	ros::NodeHandle pnh("~");
+	
 	std::string object_name, object_reference_frame;
 	std::vector<double> object_dimensions;
 	geometry_msgs::Pose pose;
+
+	std::string object_name_t, object_reference_frame_t, object_dimensions_t, object_pose_t;
+	if(!i){
+		object_name_t = "object_name";
+		object_reference_frame_t = "object_reference_frame";
+		object_dimensions_t = "object_dimensions";
+		object_pose_t = "object_pose";
+	}else{
+		object_name_t = "object"+std::to_string(i)+"_name";
+		object_reference_frame_t = "object"+std::to_string(i)+"_reference_frame";
+		object_dimensions_t = "object"+std::to_string(i)+"_dimensions";
+		object_pose_t = "object"+std::to_string(i)+"_pose";
+	}
+
 	std::size_t error = 0;
-	error += !rosparam_shortcuts::get(LOGNAME, pnh, "object_name", object_name);
-	error += !rosparam_shortcuts::get(LOGNAME, pnh, "object_reference_frame", object_reference_frame);
-	error += !rosparam_shortcuts::get(LOGNAME, pnh, "object_dimensions", object_dimensions);
-	error += !rosparam_shortcuts::get(LOGNAME, pnh, "object_pose", pose);
+	error += !rosparam_shortcuts::get(LOGNAME, pnh, object_name_t, object_name);
+	error += !rosparam_shortcuts::get(LOGNAME, pnh, object_reference_frame_t, object_reference_frame);
+	error += !rosparam_shortcuts::get(LOGNAME, pnh, object_dimensions_t, object_dimensions);
+	error += !rosparam_shortcuts::get(LOGNAME, pnh, object_pose_t, pose);
 	rosparam_shortcuts::shutdownIfError(LOGNAME, error);
 
 	moveit_msgs::CollisionObject object;
@@ -73,9 +106,13 @@ int main(int argc, char** argv) {
 	ros::Duration(1.0).sleep();  // Wait for ApplyPlanningScene service
 	moveit::planning_interface::PlanningSceneInterface psi;
 	ros::NodeHandle pnh("~");
-	if (pnh.param("spawn_table", true))
+	if (pnh.param("spawn_table", true)){
 		spawnObject(psi, createTable());
+		spawnObject(psi, createTable(2)); // <==== new
+	}
 	spawnObject(psi, createObject());
+
+	spawnObject(psi, createObject(2)); // <==== new
 
 	// --------- RUN ---------
 	//load param
