@@ -90,13 +90,14 @@ void PickPlaceTask::init() {
 	// Sampling planner
 	auto sampling_planner = std::make_shared<solvers::PipelinePlanner>();
 	sampling_planner->setProperty("goal_joint_tolerance", 1e-5);
+	// sampling_planner->setStepSize(.001); //not available
 
 	// Cartesian planner
 	auto cartesian_planner = std::make_shared<solvers::CartesianPath>();
 	cartesian_planner->setMaxVelocityScaling(1.0);
 	cartesian_planner->setMaxAccelerationScaling(1.0);
 	cartesian_planner->setStepSize(.01);
-	// cartesian_planner->setStepSize(.0001); //slow
+	// cartesian_planner->setStepSize(.001); //slow
 
 	// Set task properties
 	t.setProperty("group", arm_group_name_);
@@ -358,8 +359,9 @@ void PickPlaceTask::init() {
 	// /*
 
 
-	// current_state = nullptr;  // Forward current_state on to grasp pose generator
+	
     // ====================== Current State ====================== //
+	// current_state = nullptr;  // Forward current_state on to grasp pose generator
 	// {
 	// 	auto _current_state = std::make_unique<stages::CurrentState>("current state2");
 
@@ -374,7 +376,6 @@ void PickPlaceTask::init() {
 	// 		    return true;
     //         }
     //     );
-
 	// 	current_state = applicability_filter.get();
 	// 	t.add(std::move(applicability_filter));
 	// }
