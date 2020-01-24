@@ -388,6 +388,7 @@ void PickPlaceTask::init() {
 		t.add(std::move(stage));
 	}
 
+	/*
     // ====================== Move to Pick ====================== //
 	{
 		auto stage = std::make_unique<stages::Connect>("move to pick2", stages::Connect::GroupPlannerVector{ { arm_group_name_, sampling_planner } });
@@ -604,7 +605,7 @@ void PickPlaceTask::init() {
 		stage->restrictDirection(stages::MoveTo::FORWARD);
 		t.add(std::move(stage));
 	}
-	// */	
+	*/
 }
 
 
