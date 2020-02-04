@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/devel_isolated/moveit_ros_move_group
-
-Name: moveit_ros_move_group
-Description: Description of moveit_ros_move_group
-Version: 1.0.1
-Cflags: -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/move_group/include
-Libs: -L${prefix}/lib -lmoveit_move_group_capabilities_base
-Requires: moveit_core moveit_ros_planning tf2_geometry_msgs

@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/install_isolated
-
-Name: moveit_planners_ompl
-Description: Description of moveit_planners_ompl
-Version: 1.0.1
-Cflags: -I${prefix}/include -I/opt/ros/melodic/include/ompl-1.4
-Libs: -L${prefix}/lib -lmoveit_ompl_interface /opt/ros/melodic/lib/libompl.so
-Requires: moveit_core

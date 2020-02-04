@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/devel_isolated/moveit_ros_warehouse
-
-Name: moveit_ros_warehouse
-Description: Description of moveit_ros_warehouse
-Version: 1.0.1
-Cflags: -I/home/rajendra/ws_moveit/src/moveit/moveit_ros/warehouse/warehouse/include
-Libs: -L${prefix}/lib -lmoveit_warehouse
-Requires: moveit_ros_planning warehouse_ros

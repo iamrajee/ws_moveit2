@@ -1,8 +1,0 @@
-prefix=/home/rajendra/ws_moveit/devel_isolated/moveit_commander
-
-Name: moveit_commander
-Description: Description of moveit_commander
-Version: 1.0.1
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
