@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/install_isolated
+
+Name: moveit_commander
+Description: Description of moveit_commander
+Version: 1.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

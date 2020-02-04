@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/devel_isolated/moveit_fake_controller_manager
+
+Name: moveit_fake_controller_manager
+Description: Description of moveit_fake_controller_manager
+Version: 1.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: moveit_core moveit_ros_planning

@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/devel_isolated/moveit_task_constructor_capabilities
+
+Name: moveit_task_constructor_capabilities
+Description: Description of moveit_task_constructor_capabilities
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib -l$PROJECT_NAME}
+Requires: moveit_task_constructor_msgs std_msgs

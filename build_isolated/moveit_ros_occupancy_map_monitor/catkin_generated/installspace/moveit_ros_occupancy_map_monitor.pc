@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/install_isolated
+
+Name: moveit_ros_occupancy_map_monitor
+Description: Description of moveit_ros_occupancy_map_monitor
+Version: 1.0.1
+Cflags: -I${prefix}/include -I/usr/include/eigen3 -I/opt/ros/melodic/include
+Libs: -L${prefix}/lib -lmoveit_ros_occupancy_map_monitor /opt/ros/melodic/lib/liboctomap.so /opt/ros/melodic/lib/liboctomath.so
+Requires: moveit_core moveit_msgs

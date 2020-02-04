@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/devel_isolated/pr2_moveit_config
+
+Name: pr2_moveit_config
+Description: Description of pr2_moveit_config
+Version: 0.7.3
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

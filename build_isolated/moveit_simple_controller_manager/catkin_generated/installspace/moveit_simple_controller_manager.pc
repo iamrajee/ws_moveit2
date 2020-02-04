@@ -1,0 +1,8 @@
+prefix=/home/rajendra/ws_moveit/install_isolated
+
+Name: moveit_simple_controller_manager
+Description: Description of moveit_simple_controller_manager
+Version: 1.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lmoveit_simple_controller_manager
+Requires: moveit_core actionlib control_msgs
